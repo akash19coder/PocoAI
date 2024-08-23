@@ -22,8 +22,6 @@ export async function POST(request) {
   const genAI = new GoogleGenerativeAI(process.env.API_KEY);
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-  await dbconnect();
-
   const prompt = `You are an expert flashcard generator. Your goal is to create educational flashcards based on the keyword: **${res.text}**.
 
   **Instructions:**
