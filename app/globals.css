@@ -17,3 +17,29 @@
 .outfit {
   font-family: "Outfit";
 }
+.no-visible-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.no-visible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.dot-flashing {
+  font-weight: bold;
+  animation: dot-blink 1s steps(5, end) infinite;
+}
+
+@keyframes dot-blink {
+  0%,
+  20% {
+    color: transparent;
+  }
+  40% {
+    color: black;
+  }
+  100% {
+    color: transparent;
+  }
+}

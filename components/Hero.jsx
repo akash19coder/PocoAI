@@ -1,6 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
 import { HeroHighlight, Highlight } from "./ui/hero-highlight";
+import { Button } from "./ui/button";
+import Link from "next/link";
 export function Hero() {
   return (
     <HeroHighlight>
@@ -24,6 +26,13 @@ export function Hero() {
         <Highlight className="text-black dark:text-white">
           AI do the heavyliftings!
         </Highlight>
+        <div className="xs:mt-6">
+          <Link href={"/flashcards"}>
+            <Button className="text-black bg-zinc-50 mt-6 ">
+              Generate Now...
+            </Button>
+          </Link>
+        </div>
       </motion.h1>
     </HeroHighlight>
   );
